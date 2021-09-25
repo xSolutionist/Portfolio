@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Portfolio.Data;
 
 namespace Portfolio
 {
@@ -26,6 +28,9 @@ namespace Portfolio
             services.AddRazorPages();
              services.AddControllersWithViews()
              .AddRazorRuntimeCompilation();
+
+            services.AddDbContext<PortfolioContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PortfolioContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
