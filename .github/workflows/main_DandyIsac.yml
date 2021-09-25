@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'DandyIsac'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0f21915068fa4f55b963a60545b551db }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_37f1bd4080e7499cb307a18e0a0eabd2 }}
         package: .
